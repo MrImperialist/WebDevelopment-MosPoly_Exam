@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет-магазин</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="/" class="logo">МагазинОнлайн</a>
+                <div class="search">
+                    <input type="text" placeholder="Поиск товаров...">
+                </div>
+                <div class="header__actions">
+                    <a href="/cart.html" class="cart-icon">
+                        <span class="cart-count">Корзина </span>
+                    </a>
+                    <a href="/orders.html" class="profile-icon">Личный кабинет</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="notifications" id="notifications"></div>
+
+    <main class="main">
+        <div class="container">
+            <div class="catalog-layout">
+                <aside class="sidebar">
+                    <form class="filters" id="filters-form">
+                        <div class="filter-group">
+                            <h3>Категории</h3>
+                            <div id="categories-list"></div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h3>Стоимость</h3>
+                            <input type="number" name="price_from" placeholder="От">
+                            <input type="number" name="price_to" placeholder="До">
+                        </div>
+
+                        <div class="filter-group">
+                            <label>
+                                <input type="checkbox" name="discount">
+                                Товары со скидкой
+                            </label>
+                        </div>
+
+                        <button type="submit">Применить</button>
+                    </form>
+                </aside>
+
+                <section class="catalog">
+                    <div class="catalog-header">
+                        <h1>Каталог</h1>
+                        <select id="sort-select">
+                            <option value="price_asc">По цене (возрастание)</option>
+                            <option value="price_desc">По цене (убывание)</option>
+                            <option value="rating">По рейтингу</option>
+                        </select>
+                    </div>
+
+                    <div class="products-grid" id="products-grid"></div>
+
+                    <button class="load-more" id="load-more">Загрузить ещё</button>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="company-info">
+                    <h3>МагазинОнлайн</h3>
+                    <p>© 2024 Все права защищены</p>
+                </div>
+                <div class="contact-info">
+                    <p>Телефон: +7 (999) 123-45-67</p>
+                    <p>Email: info@magazin.ru</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/catalog.js"></script>
+</body>
+</html> 
